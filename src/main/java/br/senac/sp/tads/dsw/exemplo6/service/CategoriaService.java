@@ -19,7 +19,7 @@ public class CategoriaService {
 
     public List<CategoriaResponseDTO> listar() {
         return repository.findAll().stream()
-                .map(c -> new CategoriaResponseDTO(c.getId(), c.getNome()))
+                .map(c -> new CategoriaResponseDTO(c.getId(), c.getNome())) //Vai mapear cada uma das entidades "c", que é a categoria, com os DTOs de resposta
                 .toList();
     }
 
